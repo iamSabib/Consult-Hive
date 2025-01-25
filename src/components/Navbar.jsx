@@ -11,7 +11,8 @@ const Navbar = () => {
 
   const links = [
     <li key="home"><Link to="/">Home</Link></li>,
-    <li key="allmovies"><Link to="/allmovies">All Movies</Link></li>,
+    <li key="add-service"><Link to="/add-service">Add Service</Link></li>,
+    <li key="manage-service"><Link to="/manage-service">Manage Service</Link></li>,
     <li key="faq"><Link to="/faq">FAQ</Link></li>,
     user && <li key="addmovies"><Link to="/user/addmovies">Add Movies</Link></li>,
     user && <li key="favmovies"><Link to={`/user/favmovies/${user.email}`}>Favorite Movies</Link></li>,

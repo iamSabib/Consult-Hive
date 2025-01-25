@@ -1,6 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import { app } from '../firebase/firebase.init';
+import axios from 'axios';
+import { use } from 'react';
 
 
 export const AuthContext = createContext(null);
@@ -53,12 +55,25 @@ const AuthProvider = ({ children }) => {
         setUser,
         logOut,
         signInWithGoogle,
-        resetPassword
+        resetPassword,
+        
     }
 
     useEffect(() => {
         const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
+
+            if(currentUser){
+                // console.log("hit jwt");
+                const jwtUser = {email: currentUser?.email}
+                // console.log(jwtUser);
+                //getting jwt token
+                axios.post('https://consult-hive-server.vercel.app/jwt', jwtUser, {withCredentials: true})
+                .then(res => {
+                    console.log(res.data);
+                })
+            }
+
             setLoading(false);
         });
         return () => {

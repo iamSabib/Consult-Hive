@@ -21,7 +21,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <label className="ml-1 swap swap-rotate">
+    <label className="ml-2 swap swap-rotate">
       {/* Hidden checkbox */}
       <input
         type="checkbox"
