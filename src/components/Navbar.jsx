@@ -1,7 +1,7 @@
 import { AuthContext } from '../provider/AuthProvider';
 import { Link, useNavigate } from 'react-router';
 import ThemeToggle from './ThemeToggle';
-import { GiTreeBeehive } from 'react-icons/gi';
+import { GiTreeBeehive } from "react-icons/gi";
 import { useContext } from 'react';
 
 const Navbar = () => {
@@ -46,9 +46,9 @@ const Navbar = () => {
           to="/"
 
         >
-          <div className="btn btn-ghost text-2xl  italic flex items-center pl-0 md:pl-4 gap-2 flex-col">
-            <GiTreeBeehive className="text-yellow-400" />
-            <span className="text-center hidden sm:block font-bold">Movie Mania</span>
+          <div className="btn btn-ghost text-2xl  italic flex items-center pl-0 md:pl-4 gap-2 ">
+          <GiTreeBeehive className='text-yellow-300 text-3xl text-center'/>
+            <span className="text-center hidden sm:block font-bold">Consult Hive</span>
           </div>
         </Link>
       </div>

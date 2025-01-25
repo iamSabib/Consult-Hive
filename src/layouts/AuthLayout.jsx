@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../components/Footer';
-import AuthProvider from '../provider/AuthProvider';
+// import { AuthContext } from '../provider/AuthProvider';
 
 // const AuthLayout = ({children}) => {
 const AuthLayout = ({children}) => {
