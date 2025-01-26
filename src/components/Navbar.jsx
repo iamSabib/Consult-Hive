@@ -5,12 +5,14 @@ import { GiTreeBeehive } from "react-icons/gi";
 import { useContext } from 'react';
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, setLoading } = useContext(AuthContext);
   const navigate = useNavigate();
   // console.log(user.email);
 
   const links = [
-    <li key="home"><Link to="/">Home</Link></li>,
+    //set loader to home true when clicked
+    <li key="home"><Link to="/" onClick={() => setLoading(true)}>Home</Link></li>,
+    <li key="all-service"><Link to="/allservice" onClick={() => setLoading(true)}>All Service</Link></li>,
     <li key="add-service"><Link to="/add-service">Add Service</Link></li>,
     <li key="manage-service"><Link to="/manage-service">Manage Service</Link></li>,
     <li key="faq"><Link to="/faq">FAQ</Link></li>,

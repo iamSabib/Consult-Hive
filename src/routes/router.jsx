@@ -7,6 +7,8 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import AddService from "../pages/AddService";
 import ManageService from "../pages/ManageService";
+import ServiceDetails from "../pages/ServiceDetails";
+import AllServices from "../pages/AllServices";
 
 
 
@@ -18,6 +20,17 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
+                loader: () => fetch("https://consult-hive-server.vercel.app/featureservices"),
+            },
+            {
+                path: "/allservice",
+                element: <AllServices></AllServices>,
+                loader: () => fetch("https://consult-hive-server.vercel.app/services"),
+            },
+            {
+                path: "/service/:id",
+                element: <PrivateRoute> <ServiceDetails /> </PrivateRoute>,
+                loader: ({params}) => fetch(`https://consult-hive-server.vercel.app/services/${params.id}`),
             },
             {
                 path: "/add-service",

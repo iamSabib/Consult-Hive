@@ -56,7 +56,7 @@ const AuthProvider = ({ children }) => {
         logOut,
         signInWithGoogle,
         resetPassword,
-        
+        setLoading,
     }
 
     useEffect(() => {
