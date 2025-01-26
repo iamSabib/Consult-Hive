@@ -13,7 +13,7 @@ const ManageService = () => {
     useEffect(() => {
         if (user) { 
             setLoading(true);
-            axios.get(`https://consult-hive-server.vercel.app/services?email=${email}`, {
+            axios.get(`https://consult-hive-server.vercel.app/sservices?email=${email}`, {
                 withCredentials: true
             })
             .then(res => {
