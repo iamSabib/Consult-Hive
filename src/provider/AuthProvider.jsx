@@ -70,7 +70,7 @@ const AuthProvider = ({ children }) => {
                 //getting jwt token
                 axios.post('https://consult-hive-server.vercel.app/jwt', jwtUser, {withCredentials: true})
                 .then(res => {
-                    console.log(res.data);
+                    // console.log(res.data);
                 })
             }
 

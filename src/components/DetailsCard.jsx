@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const DetailsCard = ({ url, name, price, area, description, email: providerEmail, displayName: providerName, photoURL, _id }) => {
     const { user } = useContext(AuthContext);
@@ -15,15 +16,25 @@ const DetailsCard = ({ url, name, price, area, description, email: providerEmail
         const bookingData = {
             serviceId: _id,
             userEmail,
+            providerEmail,
             status: "pending",
             date: formData.get("date"),
             instruction: formData.get("instruction"),
         };
         console.log("Booking Data:", bookingData);
 
-        // Submit the data (send to backend or log for now)
-        // Example: axios.post("/api/book-service", bookingData).then(...);
-        axios.post("https://consult-hive-server.vercel.app/book-services", bookingData).then(req => console.log(req.data))
+        axios.post("https://consult-hive-server.vercel.app/book-services", bookingData).then(req => {
+            console.log(req.data);
+            if (req.data.insertedId) {
+                Swal.fire({
+                    title: "Order Placed",
+                    icon: "success",
+                });
+            }
+        }
+        )
+
+        document.getElementById(_id).close()
     };
 
     return (

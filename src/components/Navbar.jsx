@@ -13,11 +13,11 @@ const Navbar = () => {
     //set loader to home true when clicked
     <li key="home"><Link to="/" onClick={() => setLoading(true)}>Home</Link></li>,
     <li key="all-service"><Link to="/allservice" onClick={() => setLoading(true)}>All Service</Link></li>,
-    <li key="add-service"><Link to="/add-service">Add Service</Link></li>,
-    <li key="manage-service"><Link to="/manage-service">Manage Service</Link></li>,
+    user && <li key="add-service"><Link to="/add-service">Add Service</Link></li>,
+    user && <li key="manage-service"><Link to="/manage-service">Manage Service</Link></li>,
+    user && <li key="booked-service"><Link to="/booked-service">Booked Service</Link></li>,
+    user && <li key="services-todo"><Link to="/services-todo">Service To Do</Link></li>,
     <li key="faq"><Link to="/faq">FAQ</Link></li>,
-    user && <li key="addmovies"><Link to="/user/addmovies">Add Movies</Link></li>,
-    user && <li key="favmovies"><Link to={`/user/favmovies/${user.email}`}>Favorite Movies</Link></li>,
   ];
 
   return (

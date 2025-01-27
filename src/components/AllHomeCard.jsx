@@ -7,13 +7,13 @@ const AllHomeCard = ({ url, name, price, area, description, email, displayName, 
     setLoading(false);
 
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl max-w-5xl mx-auto ">
+        <div className="card lg:card-side bg-base-100 shadow-xl lg:max-w-5xl mx-auto ">
             {/* Card Image */}
             <figure className="lg:w-1/2">
                 <img
                     src={url}
                     alt="Service"
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full max-w-2xl lg:max-w-5xl object-cover rounded-lg"
                 />
             </figure>
             {/* Card Content */}

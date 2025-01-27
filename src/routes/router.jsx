@@ -9,6 +9,9 @@ import AddService from "../pages/AddService";
 import ManageService from "../pages/ManageService";
 import ServiceDetails from "../pages/ServiceDetails";
 import AllServices from "../pages/AllServices";
+import UpdateService from "../pages/UpdateService";
+import BookedService from "../pages/BookedService";
+import ServicesTodo from "../pages/ServicesTodo";
 
 
 
@@ -39,7 +42,20 @@ const router = createBrowserRouter([
             {
                 path: "/manage-service",
                 element: <PrivateRoute> <ManageService /> </PrivateRoute>
-            }
+            },
+            {
+                path: "/upadate-service/:id",
+                element: <PrivateRoute> <UpdateService /> </PrivateRoute>,
+                loader: ({params}) => fetch(`https://consult-hive-server.vercel.app/services/${params.id}`),
+            },
+            {
+                path: "/booked-service",
+                element: <PrivateRoute> <BookedService /> </PrivateRoute>
+            },
+            {
+                path: "/services-todo",
+                element: <PrivateRoute> <ServicesTodo /> </PrivateRoute>
+            },
         ]
     },
     {

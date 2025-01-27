@@ -10,7 +10,7 @@ const ServiceDetails = () => {
     setLoading(false)
     return (
         <div>
-            Service Details 
+            <h2 className='text-center text-3xl font-bold py-10'>Service Details </h2>
             <div>
                 <DetailsCard {...consultaionService}></DetailsCard>
             </div>

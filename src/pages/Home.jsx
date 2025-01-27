@@ -17,9 +17,9 @@ const Home = () => {
 
     return (
         <div>
-            Home {consultaionServices?.length}
+            <h2 className="text-3xl font-bold py-10 text-center">Feature Services</h2>
             {/* feature service */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
                 {consultaionServices?.map(service => <HomeCard key={service._id} {...service}></HomeCard>)}
             </div>
 
