@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     };
 
-    // const displayName = () => console.log(auth.currentUser.displayName, auth.currentUser.photoURL)
+    // const displayName = () => //console.log(auth.currentUser.displayName, auth.currentUser.photoURL)
 
     const authInfo = {
         userRegister,

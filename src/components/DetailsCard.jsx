@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const DetailsCard = ({ url, name, price, area, description, email: providerEmail, displayName: providerName, photoURL, _id }) => {
     const { user } = useContext(AuthContext);
     const { email: userEmail, displayName: userName } = user || {};
-    console.log('user email:', userEmail, 'provider email:', providerEmail);
+    //console.log('user email:', userEmail, 'provider email:', providerEmail);
 
 
     const handleBookingSubmit = (e) => {
@@ -21,10 +21,10 @@ const DetailsCard = ({ url, name, price, area, description, email: providerEmail
             date: formData.get("date"),
             instruction: formData.get("instruction"),
         };
-        console.log("Booking Data:", bookingData);
+        //console.log("Booking Data:", bookingData);
 
         axios.post("https://consult-hive-server.vercel.app/book-services", bookingData).then(req => {
-            console.log(req.data);
+            //console.log(req.data);
             if (req.data.insertedId) {
                 Swal.fire({
                     title: "Order Placed",

@@ -12,7 +12,7 @@ const Home = () => {
     const consultaionServices = useLoaderData();
     setLoading(false);
 
-    console.log(consultaionServices);
+    //console.log(consultaionServices);
 
     if(loading) return <Loading></Loading>
 

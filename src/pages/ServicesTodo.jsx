@@ -20,7 +20,7 @@ const ServicesTodo = () => {
                 })
                 .then((res) => {
                     setLoading(false);
-                    console.log('Response Data:', res.data);
+                    //console.log('Response Data:', res.data);
                     setBookings(res.data);
                 })
                 .catch((err) => {
@@ -31,12 +31,12 @@ const ServicesTodo = () => {
     }, []);
 
     const updateStatus = (id, newStatus) => {
-        console.log(`Booking ID: ${id}, New Status: ${newStatus}`);
+        //console.log(`Booking ID: ${id}, New Status: ${newStatus}`);
         // Optional: Call an API to update the status in the backend
         axios
             .patch(`https://consult-hive-server.vercel.app/bookedservices/${id}`, { status: newStatus })
             .then((res) => {
-                console.log(res.data);
+                //console.log(res.data);
                 if (res.data.modifiedCount) {
                     Swal.fire('Success', 'Status updated successfully!', 'success');
                 }

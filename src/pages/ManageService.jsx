@@ -34,7 +34,7 @@ const ManageService = () => {
                 })
                     .then(res => {
                         setLoading(false);
-                        console.log("Response Data:", res.data);
+                        //console.log("Response Data:", res.data);
                     })
 
               Swal.fire({
@@ -44,7 +44,7 @@ const ManageService = () => {
               });
               setLoading(false)
               setmyServices(myServices.filter((service) => service._id !== id));
-              console.log("Deleted",id)
+              //console.log("Deleted",id)
             }
             
           });
@@ -82,7 +82,7 @@ const ManageService = () => {
             })
                 .then(res => {
                     setLoading(false);
-                    console.log("Response Data:", res.data);
+                    //console.log("Response Data:", res.data);
                     setmyServices(res.data)
                 })
                 .catch(err => {

@@ -26,7 +26,7 @@ const UpdateService = () => {
         try {
             setLoading(true)
             const response = await axios.put(`https://consult-hive-server.vercel.app/services/${_id}`, updatedService);
-            console.log(response.data);
+            //console.log(response.data);
             setLoading(false)
             if (response.data.success) {
                 Swal.fire({

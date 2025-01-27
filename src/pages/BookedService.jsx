@@ -20,7 +20,7 @@ const BookedService = () => {
                 })
                 .then((res) => {
                     setLoading(false);
-                    console.log('Response Data:', res.data);
+                    //console.log('Response Data:', res.data);
                     setBookings(res.data);
                 })
                 .catch((err) => {
