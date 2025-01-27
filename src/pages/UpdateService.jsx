@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import { useState } from 'react';
 import Loading from '../components/Loading';
+import { Helmet } from 'react-helmet-async';
 
 const UpdateService = () => {
     const consultService = useLoaderData();
@@ -44,6 +45,7 @@ const UpdateService = () => {
 
     return (
         <div className="hero bg-base-200 min-h-screen">
+            <Helmet><title>Update Hive</title></Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Update Service</h1>

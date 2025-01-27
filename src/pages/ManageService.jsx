@@ -4,6 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import Loading from '../components/Loading';
 import ManageCard from '../components/ManageCard';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const ManageService = () => {
 
@@ -95,6 +96,7 @@ const ManageService = () => {
 
     return (
         <div>
+            <Helmet><title>Manage Hive</title></Helmet>
             <h2 className="text-3xl my-10 font-bold text-center">Manage Service</h2>
             <div className='flex flex-col mx-auto gap-y-6'>
                 {

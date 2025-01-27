@@ -12,6 +12,7 @@ import AllServices from "../pages/AllServices";
 import UpdateService from "../pages/UpdateService";
 import BookedService from "../pages/BookedService";
 import ServicesTodo from "../pages/ServicesTodo";
+import Faq from "../pages/Faq";
 
 
 
@@ -78,7 +79,16 @@ const router = createBrowserRouter([
             }
         ],
     },
-    
+    {
+        path: "/faq",
+        element: <HomeLayout />,
+        children:[ 
+            {
+                path: "/faq",
+                element:<Faq />
+            }  
+        ]
+    },
     
 
 ]);

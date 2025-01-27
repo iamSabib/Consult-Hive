@@ -34,7 +34,7 @@ const ManageCard = ({ url, name, price, area, description, email: providerEmail,
                     <div className="card-actions justify-end mt-4 gap-x-4">
                         <Link to={`/upadate-service/${_id}`}>
                         <button className="btn btn-accent" >
-                            Update
+                            Edit
                         </button>
                         </Link>
                         <button className="btn btn-error" onClick={()=> removeCard(_id)}>

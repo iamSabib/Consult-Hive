@@ -3,6 +3,7 @@ import axios from 'axios';
 import Loading from '../components/Loading';
 // import Swal from 'sweetalert2';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const BookedService = () => {
     const { user } = useContext(AuthContext);
@@ -45,6 +46,7 @@ const BookedService = () => {
 
     return (
         <div>
+            <Helmet><title>Booked Hive</title></Helmet>
             <h1 className="text-center text-3xl font-bold py-10">Booked Services</h1>
 
             {/* Show a message if there are no bookings */}

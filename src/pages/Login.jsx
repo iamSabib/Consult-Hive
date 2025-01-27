@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
@@ -50,6 +51,7 @@ const Login = () => {
 
     return (
         <div className='min-h-[calc(100vh-248px)] mt-5'>
+            <Helmet><title>Login</title></Helmet>
             <div className="card bg-base-100 w-full max-w-4xl mx-auto shrink-0 shadow-2xl mb-10">
                 <div><h2 className='text-center text-3xl pt-4'>Login</h2></div>
                 <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
