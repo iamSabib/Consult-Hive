@@ -126,12 +126,9 @@ The Service Sharing Web Application allows users to seamlessly manage and book s
 
 ---
 
-## Selected Service Category
-**Educational Services** (example).
 
----
 
-## Optional Features Implemented
+## Additional Features Implemented
 1. Spinner during data loading states.
 2. Theme toggling between light and dark modes.
 
