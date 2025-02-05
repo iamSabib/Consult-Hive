@@ -126,18 +126,6 @@ The Service Sharing Web Application allows users to seamlessly manage and book s
 
 ---
 
-## Requirements Checklist
-
-- [x] Minimum 18 GitHub commits on the client-side.
-- [x] Minimum 8 GitHub commits on the server-side.
-- [x] Responsive design for mobile, tablet, and desktop.
-- [x] Dynamic page titles.
-- [x] JWT authentication and authorization.
-- [x] Hidden Firebase and MongoDB credentials using environment variables.
-- [x] Properly deployed client and server.
-
----
-
 ## Selected Service Category
 **Educational Services** (example).
 
@@ -148,8 +136,3 @@ The Service Sharing Web Application allows users to seamlessly manage and book s
 2. Theme toggling between light and dark modes.
 
 ---
-
-## Contact
-For any queries or support, feel free to contact:
-- Email: [YourEmail@example.com](mailto:YourEmail@example.com)
-- GitHub: [YourGitHubUsername](#)
