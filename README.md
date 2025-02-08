@@ -1,7 +1,7 @@
-# Service Sharing Web Application
+# Consult Hive (service sharing) Web Application
 
 ## Project Overview
-The Service Sharing Web Application allows users to seamlessly manage and book services while ensuring a user-friendly interface. The platform is designed with essential features for service providers and users, focusing on functionality, usability, and responsiveness.
+The Consult Hive Web Application allows users to seamlessly manage and book services while ensuring a user-friendly interface. The platform is designed with essential features for service providers and users, focusing on functionality, usability, and responsiveness.
 
 ---
 
